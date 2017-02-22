@@ -1,0 +1,45 @@
+body {
+  font: 1em sans-serif;
+  background: #fff;
+  margin: 0 1em;
+}
+
+h1 {
+      color: #111111;
+      background-image: url('img/gradient.png');
+      background: -webkit-linear-gradient(left, #EB008B, #00ADEE, #EB008B);
+      background-size: 1600px 200px;
+      -webkit-text-fill-color: transparent;
+      -webkit-animation-duration: 4s;
+      -webkit-animation-name: animationgradienttitle;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: forwards;
+      -webkit-background-clip: text;
+      -moz-animation-duration: 4s;
+      -moz-animation-name: animationgradienttitle;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: forwards;
+      animation-duration: 4s;
+      animation-name: animationgradienttitle;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+  }
+
+  @-webkit-keyframes animationgradienttitle {
+      0% {
+          background-position: 0 1600px;
+      }
+
+      100% {
+          background-position: 1600px 0;
+      }
+  }
+  /*This style can be changed, it defines font of svg object; */
+.headline {
+  font: bold 2.25em sans-serif;
+}
+
+svg {
+  height: 8em;
+  width: 100%;
+}
