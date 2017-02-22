@@ -37,7 +37,8 @@
       elementIds = [
     'headline',
     'headline1',
-    'headline2'
+    'headline2',
+    'headline3'
   ]
 // ****************************************************************************
 
