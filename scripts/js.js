@@ -18,22 +18,18 @@
   var classToStyleSvg;
   var elementIds;
   var t;
-  var startIncrement = -200;
+  var startIncrement = -400;
   var increment = startIncrement;
   var upDownInc = 28;
 
 // Here we pass colors of animation;
-  // var color1 = "#E8028C"; // Start point
-  // var color2 = "#10A2E8"; // End Point
 
   var color1 = "#EB008B"; // Start point
   var color2 = "#00ADEE"; // End Point
-  var color3 = "#EB008B"; // End Point
 
-  var velo = true;
 // Here we have the control Panel of our animation generator;
 // **************************************************************************
-      speed       = 300;  // We can make our animation faster or slower [ms];
+      speed           = 350;  // We can make our animation faster or slower [ms];
 
       classToStyleSvg = 'headline'; // Here we pass class for style svg;
 
@@ -43,33 +39,10 @@
     'headline1',
     'headline2'
   ]
-/*  // Here we define paramiters for start gradient maker; You can change only values if you want;
-    t = new gradientMaker({
-    'first':  100,
-    'second': 110,
-    'third' : 150,
-    'forth' : 190,
-    'from':   100,
-    'to':     200
-  });*/
-
 // ****************************************************************************
 
   if( document.body.style.webkitBackgroundClip !== undefined )
     return;
-
-/*  function gradientMaker( config ) {
-    this.first  = config.first;
-    this.second = config.second;
-    this.third  = config.third;
-    this.forth  = config.forth;
-    this.nn = function( name ) {
-      var upDown = Math.random() > 0.5 ? -1 : 1;
-      this[name] += upDown;
-      if ( this[name] >= config.to ) this[name] = config.from;
-      return +this[name] ++;
-    }
-  }*/
 
 // function that makes it work;
   ClipPolyfillProperty = function () {
@@ -171,7 +144,7 @@ setInterval( function() {
   var imageSrc = convertCanvasToImage( c ).src;
 
     // Fill with gradient
-    if ( increment > 500 ) {
+    if ( increment > -startIncrement ) {
       increment = startIncrement;
     }
     increment += upDownInc;
@@ -202,8 +175,7 @@ setInterval( function() {
 function createGradient( ctx1 ) {
     var grd = ctx1.createLinearGradient( 0,10,increment,200);
     grd.addColorStop(0, color1);
-    grd.addColorStop(0.5, color2);
-    grd.addColorStop(1, color3);
+    grd.addColorStop(1, color2);
     return grd;
 }
 

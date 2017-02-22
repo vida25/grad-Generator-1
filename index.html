@@ -8,21 +8,25 @@
     <script src='scripts/js.js'></script>
 </head>
 <body>
-<!-- Here is defined container and h1 tag that is styling with JavaScript -->
+<!-- Here are defined containers and h1 tags that should be animated -->
     <div id='headSvg'>
-        <h1 id="headline" class="headline">This is real animation</h1>
+        <h1 id="headline">This is real animation</h1>
     </div>
     <div id='headSvg'>
-        <h1 id="headline1" class="headline1">That works well</h1>
+        <h1 id="headline1">That works well</h1>
     </div>
     <div id='headSvg'>
-        <h1 id="headline2" class="headline2">In IE 11</h1>
+        <h1 id="headline2" >In IE 11</h1>
     </div>
-
+    <div id='headSvg'>
+        <h1 id="headline2" >And in IE10</h1>
+    </div>
 
 <!-- This canvas is needed for program -->
-<canvas id="myCanvas" width="1600" height="100"
-    style="border:1px solid #d3d3d3; top: -999px; left: -999px; position: absolute;">
+<canvas id="myCanvas" width="800" height="100"
+    style="border:1px solid #d3d3d3;
+    top: -999px; left: -999px; position: absolute;
+    display: none; ">
     Your browser does not support the HTML5 canvas tag.
 </canvas>
 
