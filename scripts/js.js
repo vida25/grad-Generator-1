@@ -18,17 +18,22 @@
   var classToStyleSvg;
   var elementIds;
   var t;
-  var increment = 0;
+  var startIncrement = -200;
+  var increment = startIncrement;
   var upDownInc = 28;
 
 // Here we pass colors of animation;
-  var color1 = "#E8028C"; // Start point
-  var color2 = "#10A2E8"; // End Point
+  // var color1 = "#E8028C"; // Start point
+  // var color2 = "#10A2E8"; // End Point
+
+  var color1 = "#EB008B"; // Start point
+  var color2 = "#00ADEE"; // End Point
+  var color3 = "#EB008B"; // End Point
 
   var velo = true;
 // Here we have the control Panel of our animation generator;
 // **************************************************************************
-      speed       = 385;  // We can make our animation faster or slower [ms];
+      speed       = 300;  // We can make our animation faster or slower [ms];
 
       classToStyleSvg = 'headline'; // Here we pass class for style svg;
 
@@ -166,11 +171,8 @@ setInterval( function() {
   var imageSrc = convertCanvasToImage( c ).src;
 
     // Fill with gradient
-    if ( increment > 400 ) {
-      var color3 = color2;
-      color2 = color1;
-      color1 = color3;
-      increment = 0;
+    if ( increment > 500 ) {
+      increment = startIncrement;
     }
     increment += upDownInc;
 
@@ -200,7 +202,8 @@ setInterval( function() {
 function createGradient( ctx1 ) {
     var grd = ctx1.createLinearGradient( 0,10,increment,200);
     grd.addColorStop(0, color1);
-    grd.addColorStop(1, color2);
+    grd.addColorStop(0.5, color2);
+    grd.addColorStop(1, color3);
     return grd;
 }
 
