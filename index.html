@@ -9,27 +9,27 @@
 </head>
 <body>
 <!-- Here are defined containers and h1 tags that should be animated -->
-    <div id='headSvg'>
-        <h1 id="headline">This is real animation</h1>
+    <div>
+        <h1 class='animatedTextInIE11'>This is real animation</h1>
     </div>
-    <div id='headSvg'>
-        <h1 id="headline1">That works well</h1>
+    <div>
+        <h1 class='animatedTextInIE11'>That works well</h1>
     </div>
-    <div id='headSvg'>
-        <h1 id="headline2" >In IE 11</h1>
+    <div>
+        <h1 class='animatedTextInIE11' >In IE 11</h1>
     </div>
-    <div id='headSvg'>
-        <h1 id="headline3" >And is pretty</h1>
+    <div>
+        <h1 class='animatedTextInIE11' >And is pretty</h1>
     </div>
 
-<!-- This canvas is needed for program -->
-<canvas id="myCanvas" width="800" height="100"
-    style="border:1px solid #d3d3d3;
-    top: -999px; left: -999px; position: absolute;
-    display: none; ">
-    Your browser does not support the HTML5 canvas tag.
-</canvas>
+    <!-- This text will not be animated -->
+    <div>
+        <h1> This text will not be animated </h1>
+    </div>
+
 
 </body>
 
 </html>
+
+<!-- .animatedTextInIE11 -->

@@ -4,7 +4,7 @@ body {
   margin: 0 1em;
 }
 
-h1 {
+h1.animatedTextInIE11 {
       color: #111111;
       background-image: url('img/gradient.png');
       background: -webkit-linear-gradient(left, #EB008B, #00ADEE, #EB008B);
@@ -26,6 +26,15 @@ h1 {
   }
 
   @-webkit-keyframes animationgradienttitle {
+      0% {
+          background-position: 0 1600px;
+      }
+
+      100% {
+          background-position: 1600px 0;
+      }
+  }
+    @keyframes animationgradienttitle {
       0% {
           background-position: 0 1600px;
       }
